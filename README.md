@@ -170,6 +170,129 @@ For full feature support, these are recommended but not required:
 
 ---
 
+## Customization
+
+### Changing Color Palette
+
+Want to use a different color scheme? Aurelia Dark makes it easy!
+
+#### Interactive Color Customizer
+
+Run the color customizer script for an interactive experience:
+
+```bash
+~/.config/omarchy/themes/aurelia-dark/customize-colors.sh
+```
+
+This provides:
+- **Change individual colors** — accent, background, foreground
+- **Preset palettes** — Catppuccin, Nord, Dracula, Sunset, and more
+- **Easy hex input** — just paste in your favorite color codes
+- **Instant preview** — apply changes and see results immediately
+
+#### Manual Color Editing
+
+Edit colors directly in `colors.toml`:
+
+```bash
+nano ~/.config/omarchy/themes/aurelia-dark/colors.toml
+```
+
+Key colors to customize:
+
+```toml
+accent = "#F05629"          # Primary accent (buttons, highlights)
+background = "#181B25"      # Main background color
+foreground = "#E1E4EA"      # Text/foreground color
+cursor = "#F05629"          # Cursor color
+
+# ANSI terminal colors (color0-color15)
+color1 = "#E8778A"          # Red
+color2 = "#72C9A0"          # Green
+color3 = "#F5936A"          # Yellow
+color4 = "#7EB8FA"          # Blue
+# ... and more
+```
+
+#### How Colors Cascade Through the Theme
+
+The colors in `colors.toml` are used as the base for:
+
+- **Terminal emulators** — Alacritty, Kitty, Ghostty
+- **Launcher** — Walker (accent highlights)
+- **Taskbar** — Waybar buttons and backgrounds
+- **GTK applications** — File manager, Settings, etc.
+- **Notifications** — Mako notification daemon
+- **Lockscreen** — Hyprlock
+- **TUI apps** — Neovim, btop, FZF, etc.
+
+Changing the main colors in `colors.toml` propagates to all these components!
+
+#### Applying Your Custom Palette
+
+After changing colors, re-apply the theme:
+
+1. Open Walker: `SUPER + ALT + SPACE`
+2. Go to: **Install → Style → Theme**
+3. Select **Aurelia Dark** and apply
+4. All apps reload with your new palette!
+
+### Changing Icon Pack
+
+The theme comes with **Yaru-red-dark** icons, but you can use any icon pack.
+
+#### Recommended Modern Icon Packs
+
+- **Papirus-Dark** — Clean, modern, highly polished
+- **Tela** — Contemporary design with excellent coverage
+- **Fluent** — Windows Fluent Design style
+
+#### Installing Alternative Icon Packs
+
+```bash
+# Install Papirus (recommended)
+yay -S papirus-icon-theme
+
+# Or Tela
+yay -S tela-icon-theme
+
+# Or Fluent
+yay -S fluent-icon-theme
+```
+
+#### Changing the Icon Pack
+
+Edit the theme's icon configuration:
+
+```bash
+nano ~/.config/omarchy/themes/aurelia-dark/icons.theme
+```
+
+Change to your preferred pack:
+
+```
+# Default (Yaru-red-dark)
+Yaru-red-dark
+
+# Alternative options:
+Papirus-Dark
+Tela-circle
+Fluent
+```
+
+Then re-apply the theme to activate the new icons.
+
+#### Using Omarchy's Icon Menu
+
+You can also change icons through Walker:
+
+1. Open Walker: `SUPER + ALT + SPACE`
+2. Go to: **Install → Style → Icons**
+3. Choose your preferred icon pack
+4. Apply
+
+---
+
 ## Troubleshooting
 
 ### Wallpapers not showing in Style > Background menu
