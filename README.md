@@ -1,182 +1,185 @@
 # Aurelia Dark
 
 <p align="center">
-<img src="preview.png" alt="Aurelia Dark Preview" width="900">
+  <img src="preview.png" alt="Aurelia Dark Preview" width="900">
 </p>
 
 <p align="center">
-<strong>A modern, elegant, and premium theme for Omarchy | Hyprland.</strong>
+  <strong>A modern, elegant, and premium theme for Omarchy / Hyprland.</strong>
 </p>
 
 ---
 
 ## Overview
 
-**Aurelia Dark** is a refined theme designed specifically for the **Omarchy Hyprland system**.
+**Aurelia Dark** is a refined theme crafted for the **Omarchy Hyprland** ecosystem. It delivers a polished desktop experience with cohesive styling across key system components, combining deep dark surfaces with vivid accents for a rich, modern aesthetic.
 
-The theme aims to deliver a **modern, elegant, and premium desktop experience** with cohesive styling across your entire environment.
+The name **Aurelia** is often associated with meanings such as *golden* and *moon jelly*, which reflects the theme’s balance of depth, softness, and striking contrast.
 
-Inspired by the name **Aurelia** — often associated with meanings such as *golden*, *moon jelly*, or *mother of a tyrant* — the theme combines deep dark tones with vibrant accents to create a visually rich interface.
-
-If you use an **OLED display**, Aurelia Dark truly shines.
+On **OLED displays**, Aurelia Dark looks especially sharp.
 
 ---
 
 ## Installation
 
-Aurelia Dark can be installed directly using Omarchy's theme installer.
+Aurelia Dark can be installed directly through Omarchy’s theme installer.
 
-### Terminal
+### Option 1 — Terminal
 
 ```bash
 omarchy-theme-install https://github.com/TshiSelle/Aurelia-Dark.git
 ```
+
 This command will:
 
-download the theme
+- Download the theme
+- Install it into your Omarchy themes directory
+- Apply it automatically
 
-install it into your Omarchy themes directory
+### Option 2 — Walker Menu
 
-automatically apply the theme
+1. Copy this repository URL:
 
-Walker Menu
+   ```text
+   https://github.com/TshiSelle/Aurelia-Dark.git
+   ```
 
-Copy this repository URL:
+2. Open **Walker**
 
-https://github.com/TshiSelle/Aurelia-Dark.git
+   ```text
+   SUPER + ALT + SPACE
+   ```
 
-Open Walker
+3. Navigate to:
 
-SUPER + ALT + SPACE
+   ```text
+   Install → Style → Theme
+   ```
 
-Navigate to:
+4. Paste the repository link:
 
-Install → Style → Theme
+   ```text
+   CTRL + SHIFT + V
+   ```
 
-Paste the link:
+5. Press **Enter**
 
-CTRL + SHIFT + V
+The theme will then download, install, and apply automatically.
 
-Press Enter
+---
 
-The theme will download and install automatically.
+## Features
 
-Features
+Aurelia Dark redesigns multiple parts of the Omarchy environment to create a consistent and premium visual experience.
 
-Aurelia Dark modifies multiple parts of the Omarchy environment to deliver a consistent design.
+### Desktop Components
 
-Desktop Components
+- **Waybar** — full premium redesign
+- **Walker** — complete launcher redesign
+- **Hyprlock** — modern lockscreen styling
+- **Notifications** — display duration increased from **5s** to **8s**
 
-Waybar
-Full premium redesign
-
-Walker (app launcher)
-Complete visual redesign
-
-Hyprland Lockscreen (Hyprlock)
-Modern lockscreen redesign
-
-Notifications
-Notification display time increased from 5s → 8s
-
-Terminal Support
+### Terminal Support
 
 Supported terminals:
 
-Alacritty
+- **Alacritty**
+- **Kitty**
+- **Ghostty**
 
-Kitty
+Terminal color palettes are tuned to match the Aurelia Dark visual identity.
 
-Ghostty
-
-Terminal colors are adjusted to match the Aurelia palette.
-
-Browser Support
+### Browser Support
 
 Supported browsers:
 
-Chromium-based browsers
+- **Chromium-based browsers**
 
-TUI Application Styling
+### TUI Application Styling
 
-The theme adjusts terminal UI colors for tools such as:
+Aurelia Dark also adjusts terminal UI colors for tools such as:
 
-Neovim / LazyVim
+- **Neovim / LazyVim**
+- **btop++**
+- **nvtop**
+- Other CLI utilities
 
-btop++
+### Wallpapers
 
-nvtop
+Included with the theme:
 
-other CLI utilities
+- **43 high-definition wallpapers**
+- Support for **all aspect ratios**
+- Artwork selected to complement the Aurelia palette
 
-Wallpapers
+### Animations
 
-Aurelia Dark includes:
+System animations are tuned for a **fast, fluid, and responsive** experience, with a focus on smoothness without sacrificing performance.
 
-43 high-definition wallpapers
+---
 
-support for all aspect ratios
+## Aether Integration
 
-wallpapers designed to complement the theme palette
+Omarchy themes can be extended using **Aether**, which comes pre-installed on Omarchy systems.
 
-Animations
+Aether enables deeper customization, including:
 
-System animations are tuned for a fast and fluid experience.
+- Neovim theming
+- Shader configuration
+- Font selection
+- Template customization
+- Dynamic color generation
+- Experimental GTK application colors
 
-Performance and responsiveness were prioritized to keep the system smooth and responsive.
+### Project Page
 
-Extra Customization (Aether)
-
-Omarchy themes can be extended using Aether, which is pre-installed on Omarchy systems.
-
-Aether allows deeper customization such as:
-
-Neovim theming
-
-shader configuration
-
-font selection
-
-template customization
-
-dynamic color generation
-
-experimental GTK application colors
-
-Project page:
-
+```text
 https://github.com/bjarneo/aether
+```
 
-If you are not using Omarchy, Aether can be installed from the AUR:
+### Install from AUR
 
+If you are not using Omarchy, Aether can be installed from the AUR with:
+
+```bash
 yay -S aether
-What Aurelia Changes
+```
 
-Aurelia applies styling across many parts of the system including:
+---
 
-Waybar interface
+## What Aurelia Dark Changes
 
-Walker launcher
+Aurelia Dark applies styling across many parts of the system, including:
 
-Hyprlock lockscreen
+- Waybar
+- Walker
+- Hyprlock
+- Terminal color schemes
+- TUI application colors
+- Notifications
+- Animations
+- Wallpapers
 
-terminal color schemes
+The result is a cohesive, premium Omarchy desktop aesthetic.
 
-TUI application colors
+---
 
-notifications
+## Why Choose Aurelia Dark
 
-animations
+- Clean and modern dark design
+- Consistent styling across the full environment
+- OLED-friendly visual balance
+- Enhanced wallpapers and polished animations
+- Ready to install and apply in seconds
 
-wallpapers
+---
 
-The result is a consistent premium Omarchy desktop aesthetic.
+## Author
 
-Author
-
-Omar Houssami
-
+**Omar Houssami**  
 Technical Operations Engineer
 
-GitHub:
+**GitHub**
+```text
 https://github.com/TshiSelle
+```
