@@ -172,5 +172,4 @@ The result is a cohesive, premium Omarchy desktop aesthetic.
 - Enhanced wallpapers and polished animations
 - Ready to install and apply in seconds
 
----
 
