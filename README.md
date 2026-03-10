@@ -108,13 +108,59 @@ Aurelia Dark also adjusts terminal UI colors for tools such as:
 
 Included with the theme:
 
-- **43 high-definition wallpapers**
+- **43 high-definition wallpapers** (planned)
 - Support for **all aspect ratios**
 - Artwork selected to complement the Aurelia palette
+- Easy to add more wallpapers — see [Adding Wallpapers](#adding-wallpapers) below
 
 ### Animations
 
 System animations are tuned for a **fast, fluid, and responsive** experience, with a focus on smoothness without sacrificing performance.
+
+---
+
+## Adding Wallpapers
+
+Want to add more wallpapers to Aurelia Dark? It's easy!
+
+### Quick Method
+
+1. Add your wallpaper images to the `backgrounds/` folder:
+
+   ```bash
+   cp your-wallpaper.jpg ~/.config/omarchy/themes/aurelia-dark/backgrounds/
+   ```
+
+   **Naming convention:** `aur-*.jpg` (e.g., `aur-1.jpg`, `aur-2.jpg`, etc.)
+
+2. Run the wallpaper helper script:
+
+   ```bash
+   ~/.config/omarchy/themes/aurelia-dark/add-backgrounds.sh
+   ```
+
+3. Open **Style > Background** in Walker — your new wallpapers appear immediately!
+
+### Manual Method
+
+Copy wallpapers directly to omarchy's background locations:
+
+```bash
+# Copy to theme-specific location
+cp your-wallpaper.jpg ~/.config/omarchy/backgrounds/aurelia-dark/
+
+# AND/OR copy to current theme location
+cp your-wallpaper.jpg ~/.config/omarchy/current/theme/backgrounds/
+```
+
+Then refresh the background menu in Walker — new wallpapers appear instantly!
+
+### Tips
+
+- Wallpapers should be JPG, PNG, or WebP format
+- Follow the naming convention: `aur-{number}.jpg`
+- Wallpapers appear in the menu in alphabetical order
+- No need to restart Omarchy or re-apply the theme
 
 ---
 

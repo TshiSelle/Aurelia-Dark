@@ -125,21 +125,26 @@ main() {
 
     if [[ -d "$BG_SOURCE" ]]; then
         mkdir -p "$BG_DEST"
-        cp "$BG_SOURCE"/* "$BG_DEST/" 2>/dev/null || {
-            print_error "Failed to copy backgrounds"
-            exit 1
-        }
-        BG_COUNT=$(find "$BG_DEST" -maxdepth 1 -type f | wc -l)
-        print_success "Installed $BG_COUNT wallpapers"
-    else
-        print_step "No backgrounds directory found (backgrounds will be available once added)"
-    fi
+        BG_COUNT=$(find "$BG_SOURCE" -maxdepth 1 -type f \( -name '*.jpg' -o -name '*.jpeg' -o -name '*.png' \) 2>/dev/null | wc -l)
 
-    # Also copy to current theme location if different
-    CURRENT_BG="$OMARCHY_CONFIG/current/theme/backgrounds"
-    if [[ -d "$BG_SOURCE" ]] && [[ "$CURRENT_BG" != "$BG_DEST" ]]; then
-        mkdir -p "$CURRENT_BG"
-        cp "$BG_SOURCE"/* "$CURRENT_BG/" 2>/dev/null || true
+        if [[ $BG_COUNT -gt 0 ]]; then
+            cp "$BG_SOURCE"/*.jpg "$BG_DEST/" 2>/dev/null || true
+            cp "$BG_SOURCE"/*.jpeg "$BG_DEST/" 2>/dev/null || true
+            cp "$BG_SOURCE"/*.png "$BG_DEST/" 2>/dev/null || true
+
+            # Also copy to current theme location
+            CURRENT_BG="$OMARCHY_CONFIG/current/theme/backgrounds"
+            mkdir -p "$CURRENT_BG"
+            cp "$BG_SOURCE"/*.jpg "$CURRENT_BG/" 2>/dev/null || true
+            cp "$BG_SOURCE"/*.jpeg "$CURRENT_BG/" 2>/dev/null || true
+            cp "$BG_SOURCE"/*.png "$CURRENT_BG/" 2>/dev/null || true
+
+            print_success "Installed $BG_COUNT wallpaper(s)"
+        else
+            print_step "No wallpapers found in backgrounds folder (add them later with add-backgrounds.sh)"
+        fi
+    else
+        print_step "No backgrounds directory found (create it and add wallpapers later)"
     fi
 
     # Apply the theme
@@ -178,7 +183,11 @@ main() {
         echo -e "  ${YELLOW}→${NC} Wallpapers available in Theme > Background"
     fi
 
-    echo -e "\n${BLUE}Enjoy your new Aurelia Dark theme!${NC}\n"
+    echo -e "\n${BLUE}Next steps:${NC}"
+    echo -e "  ${YELLOW}→${NC} Add wallpapers: place .jpg files in backgrounds/ folder"
+    echo -e "  ${YELLOW}→${NC} Register them: ~/.config/omarchy/themes/aurelia-dark/add-backgrounds.sh"
+    echo -e "  ${YELLOW}→${NC} View them: Style > Background in Walker\n"
+    echo -e "${BLUE}Enjoy your new Aurelia Dark theme!${NC}\n"
 }
 
 # Run installation
