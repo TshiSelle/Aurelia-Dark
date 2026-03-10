@@ -121,11 +121,9 @@ System animations are tuned for a **fast, fluid, and responsive** experience, wi
 
 ## Adding Wallpapers
 
-Want to add more wallpapers to Aurelia Dark? It's easy!
+Want to add more wallpapers to Aurelia Dark? It's simple:
 
-### Quick Method
-
-1. Add your wallpaper images to the `backgrounds/` folder:
+1. **Add wallpaper files** to the `backgrounds/` folder:
 
    ```bash
    cp your-wallpaper.jpg ~/.config/omarchy/themes/aurelia-dark/backgrounds/
@@ -133,34 +131,23 @@ Want to add more wallpapers to Aurelia Dark? It's easy!
 
    **Naming convention:** `aur-*.jpg` (e.g., `aur-1.jpg`, `aur-2.jpg`, etc.)
 
-2. Run the wallpaper helper script:
+2. **Re-apply the theme** to load the new wallpapers:
 
-   ```bash
-   ~/.config/omarchy/themes/aurelia-dark/add-backgrounds.sh
-   ```
+   - Open Walker: `SUPER + ALT + SPACE`
+   - Go to: **Install → Style → Theme**
+   - Select **Aurelia Dark** and apply
 
-3. Open **Style > Background** in Walker — your new wallpapers appear immediately!
-
-### Manual Method
-
-Copy wallpapers directly to omarchy's background locations:
-
-```bash
-# Copy to theme-specific location
-cp your-wallpaper.jpg ~/.config/omarchy/backgrounds/aurelia-dark/
-
-# AND/OR copy to current theme location
-cp your-wallpaper.jpg ~/.config/omarchy/current/theme/backgrounds/
-```
-
-Then refresh the background menu in Walker — new wallpapers appear instantly!
+3. **View your wallpapers**:
+   - Open Walker again
+   - Go to: **Style → Background**
+   - New wallpapers appear in the list!
 
 ### Tips
 
 - Wallpapers should be JPG, PNG, or WebP format
 - Follow the naming convention: `aur-{number}.jpg`
 - Wallpapers appear in the menu in alphabetical order
-- No need to restart Omarchy or re-apply the theme
+- When you re-apply the theme, all backgrounds in the folder are automatically available
 
 ---
 

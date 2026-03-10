@@ -184,9 +184,9 @@ main() {
     fi
 
     echo -e "\n${BLUE}Next steps:${NC}"
-    echo -e "  ${YELLOW}→${NC} Add wallpapers: place .jpg files in backgrounds/ folder"
-    echo -e "  ${YELLOW}→${NC} Register them: ~/.config/omarchy/themes/aurelia-dark/add-backgrounds.sh"
-    echo -e "  ${YELLOW}→${NC} View them: Style > Background in Walker\n"
+    echo -e "  ${YELLOW}→${NC} Add wallpapers: place .jpg/.png files in backgrounds/ folder"
+    echo -e "  ${YELLOW}→${NC} Re-apply theme: Install → Style → Theme → Aurelia Dark"
+    echo -e "  ${YELLOW}→${NC} View wallpapers: Style → Background in Walker\n"
     echo -e "${BLUE}Enjoy your new Aurelia Dark theme!${NC}\n"
 }
 
