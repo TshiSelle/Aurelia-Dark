@@ -174,12 +174,3 @@ The result is a cohesive, premium Omarchy desktop aesthetic.
 
 ---
 
-## Author
-
-**Omar Houssami**  
-Technical Operations Engineer
-
-**GitHub**
-```text
-https://github.com/TshiSelle
-```
