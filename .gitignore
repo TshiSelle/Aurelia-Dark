@@ -1,0 +1,19 @@
+# Wallpapers directory - add your backgrounds here locally
+# (large image files should not be stored in git)
+backgrounds/*.jpg
+backgrounds/*.jpeg
+backgrounds/*.png
+backgrounds/*.gif
+backgrounds/*.webp
+
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Build/temp files
+*.o
+*.a
+*.so
