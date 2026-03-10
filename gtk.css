@@ -1,0 +1,298 @@
+/* Aurelia Dark — GTK 3/4 + libadwaita color overrides
+ * Applied to ~/.config/gtk-3.0/gtk.css and ~/.config/gtk-4.0/gtk.css via theme-set hook
+ * iOS 26 / macOS 26 inspired: deep neutrals, warm orange accent
+ */
+
+/* ── Core palette ─────────────────────────────────────────────────────────── */
+@define-color background     #181B25;
+@define-color foreground     #E1E4EA;
+@define-color surface        #222530;
+@define-color surface2       #2B303B;
+@define-color border_color   #525866;
+@define-color muted          #717784;
+@define-color accent         #F05629;
+@define-color accent_light   #F87F6B;
+
+/* ── libadwaita semantic variables (GTK4 apps) ────────────────────────────── */
+@define-color accent_bg_color       #F05629;
+@define-color accent_fg_color       #FFFFFF;
+@define-color accent_color          #F05629;
+
+@define-color destructive_bg_color  #E8647A;
+@define-color destructive_fg_color  #FFFFFF;
+@define-color destructive_color     #E8647A;
+
+@define-color success_bg_color      #62C87E;
+@define-color success_fg_color      #181B25;
+@define-color success_color         #62C87E;
+
+@define-color warning_bg_color      #F87F6B;
+@define-color warning_fg_color      #181B25;
+@define-color warning_color         #F87F6B;
+
+@define-color error_bg_color        #E8647A;
+@define-color error_fg_color        #FFFFFF;
+@define-color error_color           #E8647A;
+
+@define-color window_bg_color       #181B25;
+@define-color window_fg_color       #E1E4EA;
+
+@define-color view_bg_color         #222530;
+@define-color view_fg_color         #E1E4EA;
+
+@define-color headerbar_bg_color    #181B25;
+@define-color headerbar_fg_color    #E1E4EA;
+@define-color headerbar_border_color rgba(255,255,255,0.08);
+@define-color headerbar_backdrop_color #181B25;
+@define-color headerbar_shade_color rgba(0,0,0,0.3);
+
+@define-color sidebar_bg_color      #181B25;
+@define-color sidebar_fg_color      #E1E4EA;
+@define-color sidebar_backdrop_color #181B25;
+@define-color sidebar_shade_color   rgba(0,0,0,0.2);
+
+@define-color card_bg_color         #222530;
+@define-color card_fg_color         #E1E4EA;
+@define-color card_shade_color      rgba(0,0,0,0.2);
+
+@define-color dialog_bg_color       #2B303B;
+@define-color dialog_fg_color       #E1E4EA;
+
+@define-color popover_bg_color      #222530;
+@define-color popover_fg_color      #E1E4EA;
+@define-color popover_shade_color   rgba(0,0,0,0.2);
+
+@define-color shade_color           rgba(0,0,0,0.35);
+@define-color scrollbar_outline_color rgba(0,0,0,0.5);
+
+@define-color borders               alpha(#E1E4EA, 0.10);
+
+/* ── Button overrides ─────────────────────────────────────────────────────── */
+button.suggested-action,
+button.suggested-action:focus {
+    background-color: #F05629;
+    color: #FFFFFF;
+    border-color: transparent;
+    border-radius: 10px;
+}
+
+button.suggested-action:hover {
+    background-color: #F87F6B;
+    color: #FFFFFF;
+}
+
+button.suggested-action:active {
+    background-color: #D04420;
+    color: #FFFFFF;
+}
+
+button.destructive-action {
+    background-color: #E8647A;
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+
+/* ── Entry (text input) ───────────────────────────────────────────────────── */
+entry {
+    background-color: #2B303B;
+    color: #E1E4EA;
+    border-color: #525866;
+    border-radius: 10px;
+}
+
+entry:focus {
+    border-color: #F05629;
+    box-shadow: 0 0 0 2px alpha(#F05629, 0.25);
+}
+
+/* ── Selection ────────────────────────────────────────────────────────────── */
+selection,
+*:selected,
+*:selected:focus {
+    background-color: #F05629;
+    color: #181B25;
+}
+
+/* ── Links ────────────────────────────────────────────────────────────────── */
+*:link {
+    color: #F05629;
+}
+
+*:link:hover {
+    color: #F87F6B;
+}
+
+/* ── Check & radio buttons ────────────────────────────────────────────────── */
+checkbutton check,
+radiobutton radio {
+    background-color: #2B303B;
+    border-color: #525866;
+    border-radius: 6px;
+}
+
+checkbutton check:checked,
+radiobutton radio:checked {
+    background-color: #F05629;
+    border-color: #F05629;
+    color: #FFFFFF;
+}
+
+/* ── Switch ───────────────────────────────────────────────────────────────── */
+switch {
+    background-color: #2B303B;
+    border-color: #525866;
+    border-radius: 100px;
+}
+
+switch:checked {
+    background-color: #F05629;
+    border-color: #F05629;
+}
+
+/* ── Progress bar ─────────────────────────────────────────────────────────── */
+progressbar trough {
+    background-color: #2B303B;
+    border-radius: 100px;
+}
+
+progressbar progress {
+    background-color: #F05629;
+    border-radius: 100px;
+}
+
+/* ── Scale (slider) ───────────────────────────────────────────────────────── */
+scale trough {
+    background-color: #2B303B;
+}
+
+scale highlight {
+    background-color: #F05629;
+}
+
+scale slider {
+    background-color: #F05629;
+    border-radius: 100px;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────────────────────── */
+scrollbar slider {
+    background-color: alpha(#717784, 0.5);
+    border-radius: 100px;
+    min-width: 6px;
+    min-height: 6px;
+}
+
+scrollbar slider:hover {
+    background-color: alpha(#99A0AE, 0.7);
+}
+
+/* ── Tooltip ──────────────────────────────────────────────────────────────── */
+tooltip {
+    background-color: #2B303B;
+    color: #E1E4EA;
+    border: 1px solid alpha(#E1E4EA, 0.1);
+    border-radius: 8px;
+    padding: 4px 8px;
+}
+
+/* ── Separator ────────────────────────────────────────────────────────────── */
+separator {
+    background-color: alpha(#E1E4EA, 0.1);
+}
+
+/* ── Notebook / Tabs ──────────────────────────────────────────────────────── */
+notebook tab {
+    background-color: transparent;
+    color: #717784;
+    border-radius: 8px 8px 0 0;
+    padding: 6px 14px;
+}
+
+notebook tab:checked {
+    background-color: #222530;
+    color: #E1E4EA;
+}
+
+/* ── Menu / Popover ───────────────────────────────────────────────────────── */
+
+/* Outer popup window — must have a background or the whole thing is transparent */
+window.popup,
+window.popup > box {
+    background-color: #222530;
+    border-radius: 14px;
+}
+
+/* Inner menu widget */
+menu,
+.menu,
+.context-menu {
+    background-color: #222530;
+    border: 1px solid rgba(82, 88, 102, 0.50);
+    border-radius: 14px;
+    padding: 5px;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.65),
+        0 0 0 0.5px rgba(0, 0, 0, 0.35),
+        0 1px 0 rgba(255, 255, 255, 0.06) inset;
+}
+
+/* Separator lines */
+menu > separator,
+.menu > separator {
+    background-color: rgba(82, 88, 102, 0.30);
+    margin: 4px 8px;
+    min-height: 1px;
+}
+
+menuitem {
+    border-radius: 9px;
+    padding: 7px 14px;
+    color: #E1E4EA;
+    font-size: 13px;
+    min-height: 0;
+    transition: background-color 120ms ease, color 120ms ease;
+}
+
+menuitem:hover,
+menuitem:selected {
+    background-color: rgba(240, 86, 41, 0.14);
+    color: #F05629;
+}
+
+menuitem:active {
+    background-color: rgba(240, 86, 41, 0.25);
+    color: #F05629;
+}
+
+menuitem:disabled {
+    color: #525866;
+    background-color: transparent;
+}
+
+/* Arrow for submenus */
+menuitem > arrow {
+    color: rgba(225, 228, 234, 0.45);
+    min-width: 14px;
+}
+
+/* ── Header bar ───────────────────────────────────────────────────────────── */
+headerbar {
+    background-color: #181B25;
+    border-bottom: 1px solid alpha(#E1E4EA, 0.08);
+    box-shadow: none;
+}
+
+/* ── List rows ────────────────────────────────────────────────────────────── */
+row {
+    border-radius: 8px;
+}
+
+row:hover {
+    background-color: rgba(240, 86, 41, 0.08);
+}
+
+row:selected,
+row:selected:focus {
+    background-color: rgba(240, 86, 41, 0.18);
+    color: #F05629;
+}

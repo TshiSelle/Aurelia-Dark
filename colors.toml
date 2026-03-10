@@ -1,0 +1,31 @@
+# Aurelia Dark — iOS 26 / macOS 26-inspired dark theme
+# Deep neutral base with warm orange accent
+# Palette: Neutral 900 (#181B25) base + Orange 500 (#F05629) accent
+
+accent = "#F05629"
+cursor = "#F05629"
+foreground = "#E1E4EA"
+background = "#181B25"
+selection_foreground = "#181B25"
+selection_background = "#F05629"
+
+# ANSI terminal palette — "Ember & Ice"
+# Warm amber/ember tones echo the orange accent; cool ice-blue counterbalance.
+# Muted saturation throughout for a premium, non-garish feel.
+color0  = "#1D2130"   # black         deep navy-dark
+color1  = "#E8778A"   # red           soft rose-coral    (not harsh)
+color2  = "#72C9A0"   # green         muted sage
+color3  = "#F5936A"   # yellow        warm amber         (accent family)
+color4  = "#7EB8FA"   # blue          soft periwinkle
+color5  = "#BF90F5"   # magenta       soft violet
+color6  = "#5EC9D6"   # cyan          glacier teal
+color7  = "#B9C2D8"   # white         cool blue-grey
+
+color8  = "#2D3347"   # bright black  medium navy
+color9  = "#F08C9D"   # bright red    lighter rose
+color10 = "#90DDB8"   # bright green  lighter sage
+color11 = "#FAA98A"   # bright yellow lighter amber
+color12 = "#9DCAFD"   # bright blue   lighter periwinkle
+color13 = "#D1AEFA"   # bright magenta lighter violet
+color14 = "#7ADAE5"   # bright cyan   lighter glacier
+color15 = "#E1E4EA"   # bright white  (Neutral 200)

@@ -1,0 +1,57 @@
+# Aurelia Dark — Alacritty colors + animated cursor
+# This file is imported by ~/.config/alacritty/alacritty.toml
+
+[colors.primary]
+background = "#181B25"
+foreground = "#E1E4EA"
+
+[colors.cursor]
+text   = "#181B25"
+cursor = "#F05629"
+
+[colors.vi_mode_cursor]
+text   = "#181B25"
+cursor = "#F05629"
+
+[colors.search.matches]
+foreground = "#181B25"
+background = "#F87F6B"
+
+[colors.search.focused_match]
+foreground = "#181B25"
+background = "#F05629"
+
+[colors.footer_bar]
+foreground = "#181B25"
+background = "#E1E4EA"
+
+[colors.selection]
+text       = "#181B25"
+background = "#F05629"
+
+[colors.normal]
+black   = "#1D2130"
+red     = "#E8778A"
+green   = "#72C9A0"
+yellow  = "#F5936A"
+blue    = "#7EB8FA"
+magenta = "#BF90F5"
+cyan    = "#5EC9D6"
+white   = "#B9C2D8"
+
+[colors.bright]
+black   = "#2D3347"
+red     = "#F08C9D"
+green   = "#90DDB8"
+yellow  = "#FAA98A"
+blue    = "#9DCAFD"
+magenta = "#D1AEFA"
+cyan    = "#7ADAE5"
+white   = "#E1E4EA"
+
+# ── Animated block cursor ──────────────────────────────────────────────────
+[cursor]
+style           = { shape = "Block", blinking = "Always" }
+blink_interval  = 600
+blink_timeout   = 0
+unfocused_hollow = true

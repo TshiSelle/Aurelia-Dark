@@ -1,0 +1,57 @@
+/* Aurelia Dark — SwayOSD (volume / brightness overlay)
+ * The default style.css imports this file then overrides border-radius: 0.
+ * We use !important to win that battle.
+ */
+
+/* ── Colors ───────────────────────────────────────────────────────────────── */
+@define-color background-color rgba(24,27,37,0.90);
+@define-color border-color     rgba(240,86,41,0.50);
+@define-color label            #E1E4EA;
+@define-color image            #F05629;
+@define-color progress         #F05629;
+
+/* ── Window — pill shape, floating ───────────────────────────────────────── */
+window {
+  border-radius: 100px !important;
+  border: 1px solid @border-color !important;
+  background-color: @background-color !important;
+  opacity: 0.96 !important;
+  padding: 0 6px !important;
+  min-width: 220px;
+  min-height: 44px;
+}
+
+/* ── Progress bar track ───────────────────────────────────────────────────── */
+progressbar {
+  border-radius: 100px !important;
+  background: rgba(255,255,255,0.08) !important;
+  min-height: 5px !important;
+}
+
+trough {
+  border-radius: 100px !important;
+  background: rgba(255,255,255,0.08) !important;
+  min-height: 5px !important;
+}
+
+/* ── Filled portion ───────────────────────────────────────────────────────── */
+progress {
+  border-radius: 100px !important;
+  background-color: @progress !important;
+  min-height: 5px !important;
+}
+
+/* ── Icon & label ─────────────────────────────────────────────────────────── */
+image {
+  color: @image;
+  -gtk-icon-size: 18px;
+  margin: 0 4px;
+}
+
+label {
+  font-family: "Fira Code", monospace;
+  font-size: 12px;
+  color: @label;
+  font-weight: 600;
+  margin: 0 4px;
+}

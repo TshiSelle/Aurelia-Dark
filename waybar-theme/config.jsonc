@@ -1,0 +1,210 @@
+{
+  "reload_style_on_change": true,
+  "position": "top",
+  "height": 44,
+  "margin-top": 8,
+  "margin-left": 12,
+  "margin-right": 12,
+  "margin-bottom": 0,
+
+  // ── Left: launcher | workspaces | active window + media ──────────
+  "group/left1": {
+    "orientation": "inherit",
+    "modules": ["custom/omarchy", "idle_inhibitor"]
+  },
+  "group/left2": {
+    "orientation": "inherit",
+    "modules": ["hyprland/workspaces"]
+  },
+  "group/left3": {
+    "orientation": "inherit",
+    "modules": ["hyprland/window", "mpris", "custom/media-prev", "custom/media-play", "custom/media-next"]
+  },
+
+  // ── Right: system | audio | tray ─────────────────────────────────
+  "group/system": {
+    "orientation": "inherit",
+    "modules": ["cpu", "memory", "network"]
+  },
+  "group/tray-expander": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 400,
+      "children-class": "tray-group-item"
+    },
+    "modules": ["custom/expand-icon", "tray"]
+  },
+
+  "modules-left":   ["group/left1", "group/left2", "group/left3"],
+  "modules-center": ["clock"],
+  "modules-right":  ["group/system", "pulseaudio", "group/tray-expander"],
+
+  // ── Modules ──────────────────────────────────────────────────────
+
+  "custom/omarchy": {
+    "format": "<span font='omarchy'>\ue900</span>",
+    "on-click": "omarchy-menu",
+    "on-click-right": "xdg-terminal-exec",
+    "tooltip-format": "Omarchy Menu  ·  Super+Alt+Space"
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated":   "󱎴",
+      "deactivated": "󰒲"
+    },
+    "tooltip-format-activated":   "Idle inhibited — screen won't sleep",
+    "tooltip-format-deactivated": "Auto-lock enabled"
+  },
+
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{name}",
+    "sort-by-number": true,
+    "persistent-workspaces": {
+      "1": [], "2": [], "3": [], "4": [], "5": []
+    }
+  },
+
+  // Format is "title - class" so rewrites can match on class for reliable icon selection
+  "hyprland/window": {
+    "format": "{title} - {class}",
+    "max-length": 44,
+    "separate-outputs": true,
+    "rewrite": {
+      "^\\s*-\\s*\\S*$":                          "",
+      ".*btop.* - .*":                            "󰧨  btop",
+      "(.*) - discord":                           "󰙯  Discord",
+      "(.*) - YouTube - Google Chrome - google-chrome": "󰗃  $1",
+      "(.*) - YouTube - Chromium - chromium":     "󰗃  $1",
+      "(.*) - Netflix.* - google-chrome":         "  Netflix",
+      "(.*) - google-chrome":                     "󰊯  $1",
+      "(.*) - chromium":                          "󰊯  $1",
+      "(.*) - obsidian":                          "  $1",
+      "(.*) - code":                              "󰨞  $1",
+      ".*nvim.* - .*":                            "  nvim",
+      ".*spotify.* - .*":                         "󰓇  Spotify",
+      "(.*) - com.mitchellh.ghostty":             "  $1",
+      "(.*) - kitty":                             "  $1",
+      "(.*) - Alacritty":                         "  $1",
+      "Steam - steam":                            "󰓓  Steam",
+      "(.*) - steam":                             "󰓓  $1",
+      "(.*) - org.gnome.Nautilus":                "󰉋  Files",
+      "(.*) - mpv":                               "󰎁  $1"
+    }
+  },
+
+  // Track info only — controls are separate clickable modules below
+  "mpris": {
+    "format":         "{player_icon}  {dynamic}",
+    "format-paused":  "<span alpha='52000'>{player_icon}  {dynamic}</span>",
+    "format-stopped": "",
+    "dynamic-order":  ["title", "artist"],
+    "dynamic-len":    28,
+    "interval":       1,
+    "player-icons": {
+      "default":  "▶",
+      "spotify":  "󰓇",
+      "firefox":  "󰈹",
+      "chromium": "󰊯",
+      "chrome":   "󰊯",
+      "mpv":      "󰎁"
+    },
+    "ignored-players": [],
+    "tooltip-format": "{player}  ·  {status}\n{artist} — {album}"
+  },
+
+  // Individual media control buttons — hidden when no player is active
+  "custom/media-prev": {
+    "format":    "⏮",
+    "exec-if":   "playerctl status 2>/dev/null",
+    "exec":      "echo",
+    "interval":  2,
+    "on-click":  "playerctl previous",
+    "tooltip":   false
+  },
+  "custom/media-play": {
+    "format":   "{}",
+    "exec-if":  "playerctl status 2>/dev/null",
+    "exec":     "playerctl status 2>/dev/null | awk '/Playing/{print \"⏸\"}/Paused/{print \"▶\"}'",
+    "interval": 1,
+    "on-click": "playerctl play-pause",
+    "tooltip":  false
+  },
+  "custom/media-next": {
+    "format":    "⏭",
+    "exec-if":   "playerctl status 2>/dev/null",
+    "exec":      "echo",
+    "interval":  2,
+    "on-click":  "playerctl next",
+    "tooltip":   false
+  },
+
+  "clock": {
+    "format":     "<span size='16384' weight='800'>{0:%H:%M}</span>  <span size='9216' alpha='42000'>{0:%a, %b %d}</span>",
+    "format-alt": "<span size='10240' weight='600'>{0:%A, %B %d %Y  %H:%M}</span>",
+    "tooltip-format": "<big>{0:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode":      "month",
+      "weeks-pos": "right",
+      "format": {
+        "months":   "<b>{}</b>",
+        "today":    "<span color='#F05629'><b><u>{}</u></b></span>",
+        "weekdays": "<span color='#F87F6B'>{}</span>"
+      }
+    },
+    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select",
+    "interval": 60
+  },
+
+  "cpu": {
+    "interval": 2,
+    "format":   "󰍛 {usage}%",
+    "on-click": "omarchy-launch-or-focus-tui btop",
+    "states": { "warning": 70, "critical": 90 }
+  },
+
+  "memory": {
+    "interval": 2,
+    "format":   "󰾆 {used:0.1f}G",
+    "on-click": "omarchy-launch-or-focus-tui btop",
+    "states": { "warning": 80, "critical": 95 }
+  },
+
+  "network": {
+    "interval": 2,
+    "format":              "↓{bandwidthDownBytes} ↑{bandwidthUpBytes}",
+    "format-wifi":         "↓{bandwidthDownBytes} ↑{bandwidthUpBytes}",
+    "format-ethernet":     "↓{bandwidthDownBytes} ↑{bandwidthUpBytes}",
+    "format-disconnected": "",
+    "tooltip-format-wifi":       "{essid}  ({signalStrength}%)\n↓ {bandwidthDownBytes}  ↑ {bandwidthUpBytes}",
+    "tooltip-format-ethernet":   "Ethernet\n↓ {bandwidthDownBytes}  ↑ {bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected"
+  },
+
+  "pulseaudio": {
+    "format":       "{icon} {volume}%",
+    "format-muted": "󰝟 muted",
+    "format-icons": {
+      "default":   ["󰕿", "󰖀", "󰕾"],
+      "headphone": "󰋋",
+      "headset":   "󰋎"
+    },
+    "on-click":       "omarchy-launch-or-focus-tui wiremix",
+    "on-click-right": "pamixer -t",
+    "scroll-step":    5,
+    "tooltip-format": "{desc}  ·  {volume}%"
+  },
+
+  "custom/expand-icon": {
+    "format":  "⣿",
+    "tooltip": false
+  },
+
+  "tray": {
+    "icon-size":       14,
+    "spacing":         10,
+    "reverse-direction": true
+  }
+}

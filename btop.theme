@@ -1,0 +1,67 @@
+# Aurelia Dark — btop theme
+# Deep neutral base with orange accent
+
+theme[main_bg]="#181B25"
+theme[main_fg]="#E1E4EA"
+theme[title]="#E1E4EA"
+theme[hi_fg]="#F05629"
+theme[selected_bg]="#2B303B"
+theme[selected_fg]="#F05629"
+theme[inactive_fg]="#525866"
+theme[graph_text]="#CACFD8"
+theme[meter_bg]="#2B303B"
+theme[proc_misc]="#E1E4EA"
+
+# Box outline colors
+theme[cpu_box]="#A97EF8"
+theme[mem_box]="#62C87E"
+theme[net_box]="#3DBFCC"
+theme[proc_box]="#F05629"
+
+# Box divider
+theme[div_line]="#2B303B"
+
+# Temperature graph — cool to hot
+theme[temp_start]="#3DBFCC"
+theme[temp_mid]="#F87F6B"
+theme[temp_end]="#E8647A"
+
+# CPU graph — blue to purple
+theme[cpu_start]="#6B9EF8"
+theme[cpu_mid]="#A97EF8"
+theme[cpu_end]="#F05629"
+
+# Mem/Disk free meter
+theme[free_start]="#62C87E"
+theme[free_mid]="#3DBFCC"
+theme[free_end]="#6B9EF8"
+
+# Mem/Disk cached meter
+theme[cached_start]="#3DBFCC"
+theme[cached_mid]="#6B9EF8"
+theme[cached_end]="#A97EF8"
+
+# Mem/Disk available meter
+theme[available_start]="#F05629"
+theme[available_mid]="#F87F6B"
+theme[available_end]="#FAA99F"
+
+# Mem/Disk used meter
+theme[used_start]="#E8647A"
+theme[used_mid]="#F05629"
+theme[used_end]="#F87F6B"
+
+# Download graph — teal to orange
+theme[download_start]="#3DBFCC"
+theme[download_mid]="#F87F6B"
+theme[download_end]="#F05629"
+
+# Upload graph — blue to purple
+theme[upload_start]="#6B9EF8"
+theme[upload_mid]="#A97EF8"
+theme[upload_end]="#C3A0FC"
+
+# Process box gradient
+theme[process_start]="#6B9EF8"
+theme[process_mid]="#A97EF8"
+theme[process_end]="#F05629"
